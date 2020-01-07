@@ -1,0 +1,258 @@
+/* POSITION FIXED: uno le da la ubicacion osea cuanto de top, cuanto de bottom de right,left y es fijo nada lo mueve
+POSITION ABSOLUTE:uno le da los valores con respecto  a otro div que tenga la posicion relativa;
+POSITION RELATIVE:es la referencia y el otro div lo toma asi;
+*/
+#todo{
+	background-image: url("imagenes/Indoorspielplatz.jpg");
+	width:100%;
+	height: 100%;
+}
+.cabeza{
+height:60px;
+width:60px;
+}
+#firstpart{
+	height: 40%;
+	width: 100%;
+	background-image: url("imagenes/lutherhaus.jpg");
+}
+#idiomas{
+	padding-left: 1200px;
+}
+#imagen{
+width:60px;
+height: 38px;
+background-color: white;
+}
+#logo{
+padding-top: 60px;
+padding-left:30px;	
+}	
+			* {
+				margin:0px;
+			}
+			
+			#header {
+				margin:auto;
+				width:500px;
+				font-family:Arial, Helvetica, sans-serif;
+				padding-left: 400px;
+				margin-bottom:90px;
+			}
+			
+			ul, ol {
+				list-style:none;
+			}
+			
+			.nav > li {
+				float:left;
+			}
+			
+			.nav li a {
+				background-color:#000;
+				color:#fff;
+				text-decoration:none;
+				padding:10px 12px;
+				display:block;
+			}
+			
+			.nav li a:hover {
+				background-color:#434343;
+			}
+			
+			.nav li ul {
+				display:none;
+				position:absolute;
+				min-width:140px;
+			}
+			
+			.nav li:hover > ul {
+				display:block;
+			}
+			
+			.nav li ul li {
+				position:relative;
+			}
+			
+			.nav li ul li ul {
+				right:-140px;
+				top:0px;
+			}
+	#imgdinamica{
+		margin-left: 65%;
+		margin-top:  60px;
+		height: 300px;
+		width: 30%;
+		border-width: 4px;
+		border-style: solid;
+		border-color: black;
+		background-image: url("imagenes/lutherhaus1.jpg");
+		position: relative;
+	}
+	#descripcion{
+		background-color: #6B7EE8;
+		margin-top: 210px;
+		opacity:0.6;
+		width: 390px;
+		height: 82px;
+	}
+	#ladescripcion{
+		font-family: 'Special Elite', cursive;
+		padding-top: 30px;
+		padding-left: 20px;
+		font-weight: bolder;
+	}
+	#izqdesign{
+		width:40px;
+		height:40px;
+	}
+	.izquierda{
+		margin-left: 15%;
+		width:60px;
+		background-color: green;
+	}
+	.derecha{
+		margin-left: 40%;
+		width:60px;
+		margin-bottom: 90%;
+		background-color: yellow;
+	}
+	#botones{
+		width:390px;
+		margin-left: 65%;
+		height:60px;
+		position: absolute;
+		margin-top: 10px;
+	}
+	#introduccion{
+		width: 40%;
+		margin-top: 20px;
+		margin-left: 20px;
+	}
+	#titulo{
+		font-family: 'Courgette', cursive;
+		color: #7686E8;
+	}
+	#texto{
+		margin-top: 60px;
+		width: 50%;
+		height: 360px;
+		position: absolute;
+	}
+	.footer{
+		background-color: black;
+		height: 30%;
+		width: 100%;
+		position: absolute;
+		margin-top: 10%;
+	}
+@media screen and (max-width: 1320px){
+	#idiomas{
+	padding-left:80%;
+	}
+	#descripcion{
+		display:none;
+	}
+	.derecha{
+		margin-left: 5%;
+	}
+	.izquierda{
+		margin-left: 5%;
+	}
+	#imgdinamica{
+		width:300px;
+	}
+
+}
+#menutestimonios{
+		background-color: #BEB6F0;
+		position: relative;
+		margin-top: 100px;
+		width:75%;
+		height:auto;
+		margin-left: 50px;
+		padding: 50px;
+	}
+	#mas{
+		background-image: url("imagenes/mas.jpg");
+		margin-left: 70%;
+		position: absolute;
+		top:50px;
+		width: 50px;
+		height: 50px;
+	}
+	#menos{
+		background-image: url("imagenes/menos.png");
+		margin-left: 90%;
+		position: absolute;
+		top:50px;
+		width: 30px;
+		height: 30px;
+	}
+	
+	#testimonio1{
+		background-color: #91FF2E;
+		position: relative;
+		margin-top: auto;
+		width:75%;
+		height:auto;
+		margin-left: 50px;
+		border-width: 4px;
+		border-color: #1AEB01;
+		border-style: solid;
+		padding: 10px;
+	}
+	#testimonio2{
+		background-color: #FFBE2E;
+		position: relative;
+		margin-top: auto;
+		width:75%;
+		height:auto;
+		margin-left: 50px;
+		border-width: 4px;
+		border-color: #FF8824;
+		border-style: solid;
+		padding: 10px;
+	}
+
+		#testimonio3{
+		background-color: #FF6A5A;
+		position: absolute;
+		margin-top: auto;
+		width:75%;
+		height:auto;
+		margin-left: 50px;
+		border-width: 4px;
+		border-color: #FF251D;
+		border-style: solid;
+		padding: 10px;
+	}
+
+	.nombres{
+		margin-left: 70%;
+
+	}
+	#bienvenida{
+		margin-left: 35%;
+		margin-top: 100px;
+
+	}
+	#öffnungszeiten{
+		margin-top: 40px;
+		position: absolute;
+		margin-left: 30%;
+		height: 300px;
+	}
+@media screen and (max-width: 1000px){
+	/*body{
+		background:#ff6000;
+	}*/
+	#header{
+	padding-left:50%;
+	width:50%;
+	}
+	#imgdinamica{
+		width:250px;
+	}
+
+}

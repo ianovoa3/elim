@@ -1,0 +1,79 @@
+<html>
+<meta name="viewport" content="width=device-width, user-scalable=no,initial-scale=1.0,maximum-scale=1.0"> 
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<link href="https://fonts.googleapis.com/css?family=Titan+One&display=swap" rel="stylesheet">
+<meta charset="UTF-8" />
+<head>
+<link href="estilos.css" rel="stylesheet" type="text/css"/>
+<link href="juegos.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="librerias/jquery.js"></script>
+<script type="text/javascript" src="librerias/Spiele.js"></script>
+<script type="text/javascript" src="librerias/jquery-ui/jquery-ui.min.js"></script>
+<script type="text/javascript" src="librerias/jquery-ui/jquery-ui.js"></script>
+</head>
+<body>
+<div id="firstpart">
+<div class="cabeza">
+<div id="logo">
+<img id="imagen" src="imagenes/logo.png">
+</div>
+</div>
+		<div id="header">
+			<ul class="nav">
+				<li><a href="Intro.html">Home</a></li>
+				<li><a href="">Kinder</a>
+					<ul>
+						<li><a href="Indoorspielplatz.html">Indoorspielplatz</a></li>
+						<li><a href="Spiele.html">Spiele</a></li>
+						<li><a href="">Kindergottesdienst</a></li>
+						<li><a href="">Royal Rangers</a>
+							<!--<ul>
+								<li><a href="">Submenu1</a></li>
+								<li><a href="">Submenu2</a></li>
+								<li><a href="">Submenu3</a></li>
+								<li><a href="">Submenu4</a></li>
+							</ul>!-->
+						</li>
+					</ul>
+				</li>
+				<li><a href="">Erwachsene</a>
+					<ul>
+						<li><a href="">Gottesdienst</a></li>
+						<li><a href="">Café</a></li>
+						<li><a href="">Jugendliche</a></li>
+						<li><a href="">Mittagsessen</a></li>
+						<li><a href="">Gemeindeleitung und Diakone</a></li>
+					</ul>
+				</li>
+				<li><a href="">Über mich</a></li>
+				<li><a href="">Heimatland</a></li>
+			</ul>
+		</div>
+		<ul  class="nav" id="idiomas">
+				<li><a href="">DE</a></li>
+				<li><a href="">EN</a></li>
+				<li><a href="">ES</a></li>
+			</ul>
+		</div>
+		<div id="cuadrodejuegos">
+			<h1 id="titel">Spiele für Alle!!!</h1>
+			<div id="juegos">
+			<button id="triqui" class="botoneleccion"></button>
+			<button id="memory" class="botoneleccion"></button>
+			<button id="sudoku" class="botoneleccion"></button>
+			<button id="ahorcado" class="botoneleccion">AHORCADO</button>
+			<button id="bibelquiz" class="botoneleccion">BIBELQUIZ</button>	
+			</div>
+			<div id="espaciojuegos">			
+		</div>
+		<div id="regreso">
+			<button type="button" class="btn btn-danger" onclick="recarga()">Zum Menü</button>
+			</div>
+		</div>
+		</body>
+		<script>
+function recarga(){
+location.reload(true);
+}
+		</script>
+	</html>
