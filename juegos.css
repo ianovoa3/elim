@@ -55,6 +55,8 @@ position: relative;
 	position: absolute;
 	margin-left: 30%;
 	margin-top: 250px;
+	border-radius: 15px;
+	background-image: url("imagenes/ahorcado.jpg");
 }
 #bibelquiz{
 	width:150px;
@@ -222,4 +224,20 @@ position: relative;
 	height:100px;
 	width:100px;
 	position: absolute;
+}
+#horca{
+	margin-top:50px;
+	margin-left:15%;
+	width:250px;
+	height:80%;
+	position: absolute;
+	background-color: black;
+}
+#galgenmann{
+	margin-top: 20px;
+	margin-left: 75%;
+	height:90%;
+	width:22%;
+	position: absolute;
+	background-color: orange;
 }

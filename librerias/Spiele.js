@@ -5,6 +5,7 @@ var acumuladorid="";
 var contador=0;
 $("#espaciojuegos").hide();
 $("#regreso").hide();
+$("#horca").hide();
 $(".botoneleccion").click(function(){
 	$(".botoneleccion").hide(1000);
 	$("#espaciojuegos").show(1000);
@@ -53,9 +54,33 @@ $("#sudoku").click(function(){
 	});
 	$("#elternsudoku").click(function (){
 		$("#selectsudoku").fadeOut();
-		
+		//elternsudoku();
 	});
 });
+//galgenmännchen
+$("#ahorcado").click(function(){
+	var linea1=document.getElementById("linea1");
+	var horca=linea1.getContext("2d");
+	horca.strokeStyle="red";
+	horca.moveTo(300,100);//largo depende del largo y ancho del div
+	horca.lineTo(20,100); //como padding con respecto al div osea cuanta distancia
+	horca.moveTo(20,350);
+	horca.lineTo(20,100);
+	horca.moveTo(200,100);
+	horca.lineTo(200,120);                         
+	horca.stroke();
+	$("#horca").show();
+	$("#espaciojuegos").append("<div id='galgenmann'><canvas id='cabeza'></canvas></div>");
+	var cabeza=document.getElementById("cabeza");
+	var canv=cabeza.getContext("2d");
+	canv.fillStyle= "green";
+	canv.arc(150,150,100,0,2*Math.PI);
+	canv.fill();
+	$("#galgenmann").show();
+});
+
+
+
 function kindersudoku(){
 	var cuadrado="imagenes/cuadrado.jpg";
 	var pentagono="imagenes/pentagono.jpg";
@@ -125,16 +150,25 @@ function kindersudoku(){
    	}
    	var i=0;
    	var j=1;
+   	var respuesta=true;
    	if(array.length>=40){
-   		$("#espaciojuegos").append("<div class='spinner-border' role='status'><span class='sr-only'>Es lädt...</span></div>");
    		while(solucion[array[i]]==array[j]){
    			i=i+2;
    			j=j+2;
-   			if(j=array.length-1){
-   			alert("Gewinner");	
+   			if(j==array.length-1){
+   				break;
    			}
    		}
-   		array=[];
+   		$("#espaciojuegos").append("<div class='spinner-border' role='status' id='verificarcampo'><span class='sr-only'>Überprüfung</span></div>");
+   		if(j==39 && i==38){
+   			alert("Gewinner");
+   			array=[];
+   			$("#espaciojuegos").hide(1000);
+			$("#regreso").show(1000);
+   		}else{
+   			alert("Noch mal versuchen");
+   			recarga();
+   		}
    	}   		
  } 		
 });	
