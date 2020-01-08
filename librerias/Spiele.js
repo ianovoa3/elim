@@ -62,24 +62,56 @@ $("#ahorcado").click(function(){
 	var linea1=document.getElementById("linea1");
 	var horca=linea1.getContext("2d");
 	horca.strokeStyle="red";
-	horca.moveTo(300,100);//largo depende del largo y ancho del div
-	horca.lineTo(20,100); //como padding con respecto al div osea cuanta distancia
+	horca.moveTo(250,50);//largo en x y largo en y
+	horca.lineTo(20,50); //como padding con respecto al div osea cuanta distancia
 	horca.moveTo(20,350);
-	horca.lineTo(20,100);
+	horca.lineTo(20,50);
 	horca.moveTo(200,100);
-	horca.lineTo(200,120);                         
+	horca.lineTo(200,50);                         
 	horca.stroke();
 	$("#horca").show();
-	$("#espaciojuegos").append("<div id='galgenmann'><canvas id='cabeza'></canvas></div>");
+	$("#espaciojuegos").append("<div id='galgenmann'><canvas id='cabeza' width='200' height='100'></canvas><canvas id='cuerpo' height:'100'></canvas><canvas id='brazos' height:'100'></canvas><canvas id='piernas' height:'100'></canvas></div>");
 	var cabeza=document.getElementById("cabeza");
 	var canv=cabeza.getContext("2d");
 	canv.fillStyle= "green";
-	canv.arc(150,150,100,0,2*Math.PI);
+	canv.arc(150,50,40,0,5*Math.PI);
 	canv.fill();
+	var cuerpo=document.getElementById("cuerpo");
+	var cuerpobj=cuerpo.getContext("2d");
+	cuerpobj.strokeStyle="green";
+	cuerpobj.moveTo(150,10);
+	cuerpobj.lineTo(150,100);
+	cuerpobj.stroke();
+ 	var brazos=document.getElementById("brazos");
+ 	var brazosobj=brazos.getContext("2d");
+ 	brazosobj.strokeStyle="green";
+ 	brazosobj.moveTo(100,5);
+ 	brazosobj.lineTo(200,5);
+ 	brazosobj.stroke();
+ 	var piernas=document.getElementById("piernas");
+ 	var piernasobj=piernas.getContext("2d");
+ 	piernasobj.strokeStyle="green";
+ 	piernasobj.moveTo(150,0);
+ 	piernasobj.lineTo(90,40);
+ 	piernasobj.moveTo(150,0);
+ 	piernasobj.lineTo(200,40);
+ 	piernasobj.stroke();
 	$("#galgenmann").show();
+	gangelmann();
 });
-
-
+function gangelmann(){
+ var palabras=["Mama","Papa","Oma","Opa","Da","Ball","Buch","Teddy","Puppe","Hund","Baby","Hallo","Tschüss","Heiß","Auf","Zu","Alle","Mehr","Nein","Ja","Hochheben","Danke","Bitte","Schuhe","Nase",
+ "ab","Abend","aber","acht","Affe","alle","allein","als","also","alt","am","an","andere","anfangen","Angst","antworten","Apfel","Arbeit","arbeiten","Arzt","auch","auf","Auge","aus",
+ "fahren","Fahrrad","fährt","fallen","Familie","fangen","fast","fehlen","Fenster","Ferien","fertig","fest","Feuer","fiel","finden","Finger","Fisch","Flasche","fliegen","Frage","fragen","Frau","frei","fressen","Freude","freuen",
+  "Freund","fröhlich","früh","früher","führen","fünf","für","Fuß","Fußball","Sache","sagen","schaffen","schauen","scheinen","schenken","schicken","Schiff","schlafen","schlagen","schlecht","schlimm","Schluss","Schnee","schnell",  
+  "schon","schön","schreiben","schreien","Schuh","Schule","Schüler","schwarz","schwer","Schwester","schwimmen","sechs","See","sehen","sehr","sein","seit","Seite","selbst","setzen","sich","sicher","sie","sieben","sieht","sind","singen","sitzen","so","sofort","Sohn", "sollen",
+  "Sommer","Sonne","Sonntag","sonst","Spaß","spät","später","Spiel","spielen","sprechen","springen","Stadt","stark","stehen","steigen","Stein","Stelle","stellen","Straße","Stück","Stunde","suchen"
+ ];
+ var random=Math.floor(Math.random()* palabras.length);
+ console.log(palabras[random],palabras[random].length);
+ //for creando campos de texto
+ // teclado con letras abecedario
+}
 
 function kindersudoku(){
 	var cuadrado="imagenes/cuadrado.jpg";
