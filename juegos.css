@@ -240,3 +240,16 @@ position: relative;
 	position: absolute;
 	background-color: orange;
 }
+#palabra{
+	margin-top: 100px;
+	margin-left: 40%;
+	height: 70%;
+	width: 20%;
+	position: absolute;
+}
+#abecedario{
+	margin-left:15%;
+	height: 8%;
+	width:68%;
+	position: absolute;
+}

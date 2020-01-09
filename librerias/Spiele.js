@@ -107,10 +107,41 @@ function gangelmann(){
   "schon","schön","schreiben","schreien","Schuh","Schule","Schüler","schwarz","schwer","Schwester","schwimmen","sechs","See","sehen","sehr","sein","seit","Seite","selbst","setzen","sich","sicher","sie","sieben","sieht","sind","singen","sitzen","so","sofort","Sohn", "sollen",
   "Sommer","Sonne","Sonntag","sonst","Spaß","spät","später","Spiel","spielen","sprechen","springen","Stadt","stark","stehen","steigen","Stein","Stelle","stellen","Straße","Stück","Stunde","suchen"
  ];
- var random=Math.floor(Math.random()* palabras.length);
- console.log(palabras[random],palabras[random].length);
- //for creando campos de texto
- // teclado con letras abecedario
+ var abecedario=["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z","Ä","Ö","Ü","ß"];
+ var random=Math.floor(Math.random()*(palabras.length-1));
+ var margintopcon=20;
+ var veces=0;
+ //math.random()== muestra numero de 0 a 1 la funcion matematica por defecto mostrara numeros desde 0 a 1;
+
+ for(var i=0;i<palabras[random].length;i++){
+ 	$("#espaciojuegos").append("<div id='palabra'><input type='text' readonly id='"+i+"'></div>");
+ 	$("#"+i).css("margin-top",margintopcon);
+ 	$("#"+i).css("width",40);
+ 	$("#"+i).css("height",25);
+ 	margintopcon=margintopcon+30;
+ }
+ $("#espaciojuegos").append("<div id='abecedario'></div>");
+  for(var j=0;j<abecedario.length;j++){
+  	$("#abecedario").append("<button value='"+abecedario[j]+"' class='letra'>"+abecedario[j]+"</button>");
+  	$("#"+i).css("width",20);
+  	$("#"+i).css("height",25);	
+  }
+  var mayusculas=palabras[random].toUpperCase();
+  $(".letra").click(function (){
+  	if(mayusculas.includes(this.value)){
+  		for(var z=0;z<mayusculas.length;z++){
+  			if(this.value==mayusculas[z])
+  			$("#"+z).val(this.value);
+  		}
+  	}else{
+  	veces=veces+1;
+  	switch(veces){
+  		case 1:
+  		$("#cabeza").hide();
+  		break;	
+  	}
+  }		
+  });
 }
 
 function kindersudoku(){
