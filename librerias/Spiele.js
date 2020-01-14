@@ -100,7 +100,7 @@ $("#ahorcado").click(function(){
 	gangelmann();
 });
 $("#bibelquiz").click(function(){
-	//morgen
+	//morgen//
 });
 
 function gangelmann(){
