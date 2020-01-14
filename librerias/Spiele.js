@@ -99,6 +99,10 @@ $("#ahorcado").click(function(){
 	$("#galgenmann").show();
 	gangelmann();
 });
+$("#bibelquiz").click(function(){
+	//morgen
+});
+
 function gangelmann(){
  var palabras=["Mama","Papa","Oma","Opa","Da","Ball","Buch","Teddy","Puppe","Hund","Baby","Hallo","Tschüss","Heiß","Auf","Zu","Alle","Mehr","Nein","Ja","Hochheben","Danke","Bitte","Schuhe","Nase",
  "ab","Abend","aber","acht","Affe","alle","allein","als","also","alt","am","an","andere","anfangen","Angst","antworten","Apfel","Arbeit","arbeiten","Arzt","auch","auf","Auge","aus",
@@ -111,6 +115,8 @@ function gangelmann(){
  var random=Math.floor(Math.random()*(palabras.length-1));
  var margintopcon=20;
  var veces=0;
+ $("#linea1").css("position","absolute");
+ 
  //math.random()== muestra numero de 0 a 1 la funcion matematica por defecto mostrara numeros desde 0 a 1;
 
  for(var i=0;i<palabras[random].length;i++){
@@ -136,9 +142,33 @@ function gangelmann(){
   	}else{
   	veces=veces+1;
   	switch(veces){
-  		case 1:
-  		$("#cabeza").hide();
+  		case 1: 	
+  		$("#cabeza").css("position","absolute");
+  		$("#horca").append($("#cabeza"));
+  		$("#cabeza").css("margin-top","50px");
+  		$("#cabeza").css("margin-left","50px");
+  		break;
+  		case 2:
+  		$("#cuerpo").css("position","absolute");
+  		$("#horca").append($("#cuerpo"));
+  		$("#cuerpo").css("margin-top","100px");
+  		$("#cuerpo").css("margin-left","50px");
   		break;	
+  		case 3:
+  		$("#brazos").css("position","absolute");
+  		$("#horca").append($("#brazos"));
+  		$("#brazos").css("margin-top","150px");
+  		$("#brazos").css("margin-left","50px");
+  		break;
+  		case 4:
+  		$("#piernas").css("position","absolute");
+  		$("#horca").append($("#piernas"));
+  		$("#piernas").css("margin-top","200px");
+  		$("#piernas").css("margin-left","50px");
+  		alert("GAME OVER");
+  		$("#espaciojuegos").hide();
+  		$("#regreso").show();
+  		break;
   	}
   }		
   });

@@ -62,6 +62,15 @@ position: relative;
 	width:150px;
 	height:150px;
 	position: absolute;
+	margin-left: 30%;
+	margin-top: 250px;
+	border-radius: 15px;
+	background-image: url("imagenes/bibel.jpg");
+}
+#bibelquiz{
+	width:150px;
+	height:150px;
+	position: absolute;
 	margin-left: 50%;
 	margin-top: 250px;
 }
