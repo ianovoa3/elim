@@ -100,7 +100,33 @@ $("#ahorcado").click(function(){
 	gangelmann();
 });
 $("#bibelquiz").click(function(){
-	//morgen//
+	$("#espaciojuegos").append("<div class='bibelfragen'></div>");
+	var preguntas=["WO?","Wann?","Wie?","Was?","Wieso?","Wohin?","Wozu?","Mit Wem?","Wer?","Wircklich?"];
+	var respuesta=["Hier","Da","Zu Hause","Heute","Morgen","Gestern","Normal","Spaßig","langweilig","Äpfel","Orange","Erdbeeren","Hunger","Durst","Langeweile","Kirche","Park","Gemeinde","Entspannung","Spaß","Motivation","Allein","Freunde","Mama","Ich","du","Wir","Ja","Nein","Vielleicht"];
+	var spanizq=0;
+	var ciclo=0;
+	var final=0;
+	var temporizador=2;
+	for(var i=0;i<preguntas.length;i++){
+		$(".bibelfragen").append("<span class='cuadropregunta'></span>");
+		$(".cuadropregunta").css("padding-left",spanizq);
+		spanizq=spanizq+22;
+	}
+	$(".bibelfragen").append("<h5>Frage </h5><div id='pregunta'></div>");	
+	// while(final<respuesta.length){
+	// $("#pregunta").append("<p>"+preguntas[ciclo]+"</p>");
+	// if(final<=temporizador){
+	// $(".bibelfragen").append("<button type='button' class='btn btn-secondary btn-lg btn-block'>"+respuesta[final]+"</button>");
+	// final=final+1;
+	// }
+	// $(".btn btn-secondary btn-lg btn-block").click(function(){
+	// 	console.log("bien");
+	// ciclo=ciclo+1;
+	// temporizador=temporizador+3;
+
+	// });
+ //  }
+	
 });
 
 function gangelmann(){
@@ -133,11 +159,14 @@ function gangelmann(){
   	$("#"+i).css("height",25);	
   }
   var mayusculas=palabras[random].toUpperCase();
+  var ganador=0;
   $(".letra").click(function (){
   	if(mayusculas.includes(this.value)){
   		for(var z=0;z<mayusculas.length;z++){
-  			if(this.value==mayusculas[z])
+  			if(this.value==mayusculas[z]){
   			$("#"+z).val(this.value);
+  			ganador=ganador+1;
+  			}
   		}
   	}else{
   	veces=veces+1;
@@ -165,12 +194,16 @@ function gangelmann(){
   		$("#horca").append($("#piernas"));
   		$("#piernas").css("margin-top","200px");
   		$("#piernas").css("margin-left","50px");
-  		alert("GAME OVER");
+  		alert("GAME OVER. Das Wort war:"+palabras[random]);
   		$("#espaciojuegos").hide();
   		$("#regreso").show();
   		break;
   	}
-  }		
+  }
+  if(ganador==mayusculas.length)
+  	alert("Gut gemacht.");
+  $("#espaciojuegos").hide();
+  $("#regreso").show();
   });
 }
 

@@ -262,3 +262,28 @@ position: relative;
 	width:68%;
 	position: absolute;
 }
+.bibelfragen{
+	margin-left: 30%;
+	margin-top: 8%;
+	position: absolute;
+	background-color: #F8FED5;
+	width:500px;
+	height: 300px;
+}
+.cuadropregunta{
+	position: absolute;
+	width:20px;
+	height:20px;
+	background-image: url("imagenes/fragenzeichen.jpg");
+	margin-left: 300px;
+}
+h5{
+	padding-top: 50px;
+	padding-left: 210px;
+	position: absolute;
+}
+#pregunta{
+	position: absolute;
+	padding-top: 80px;
+	padding-left: 150px;
+}
