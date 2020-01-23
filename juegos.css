@@ -270,20 +270,25 @@ position: relative;
 	width:500px;
 	height: 300px;
 }
-.cuadropregunta{
+#enviorta{
 	position: absolute;
-	width:20px;
-	height:20px;
-	background-image: url("imagenes/fragenzeichen.jpg");
-	margin-left: 300px;
-}
-h5{
-	padding-top: 50px;
-	padding-left: 210px;
-	position: absolute;
+	width: 100px;
+	height: 50px;
+	margin-left: 60%;
+	margin-top: 40%;
 }
 #pregunta{
 	position: absolute;
-	padding-top: 80px;
+	padding-top: 50px;
 	padding-left: 150px;
+}
+#respuesta{
+	position: absolute;
+	padding-top: 80px;
+	padding-left: 200px;
+}
+#ergebnisse{
+	position: absolute;
+	padding-top: 70%;
+	padding-left: 30%;
 }

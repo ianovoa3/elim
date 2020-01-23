@@ -99,36 +99,10 @@ $("#ahorcado").click(function(){
 	$("#galgenmann").show();
 	gangelmann();
 });
+//bibelquiz
 $("#bibelquiz").click(function(){
-	$("#espaciojuegos").append("<div class='bibelfragen'></div>");
-	var preguntas=["WO?","Wann?","Wie?","Was?","Wieso?","Wohin?","Wozu?","Mit Wem?","Wer?","Wircklich?"];
-	var respuesta=["Hier","Da","Zu Hause","Heute","Morgen","Gestern","Normal","Spaßig","langweilig","Äpfel","Orange","Erdbeeren","Hunger","Durst","Langeweile","Kirche","Park","Gemeinde","Entspannung","Spaß","Motivation","Allein","Freunde","Mama","Ich","du","Wir","Ja","Nein","Vielleicht"];
-	var spanizq=0;
-	var ciclo=0;
-	var final=0;
-	var temporizador=2;
-	for(var i=0;i<preguntas.length;i++){
-		$(".bibelfragen").append("<span class='cuadropregunta'></span>");
-		$(".cuadropregunta").css("padding-left",spanizq);
-		spanizq=spanizq+22;
-	}
-	$(".bibelfragen").append("<h5>Frage </h5><div id='pregunta'></div>");	
-	// while(final<respuesta.length){
-	// $("#pregunta").append("<p>"+preguntas[ciclo]+"</p>");
-	// if(final<=temporizador){
-	// $(".bibelfragen").append("<button type='button' class='btn btn-secondary btn-lg btn-block'>"+respuesta[final]+"</button>");
-	// final=final+1;
-	// }
-	// $(".btn btn-secondary btn-lg btn-block").click(function(){
-	// 	console.log("bien");
-	// ciclo=ciclo+1;
-	// temporizador=temporizador+3;
-
-	// });
- //  }
-	
+	bibelquiz();
 });
-
 function gangelmann(){
  var palabras=["Mama","Papa","Oma","Opa","Da","Ball","Buch","Teddy","Puppe","Hund","Baby","Hallo","Tschüss","Heiß","Auf","Zu","Alle","Mehr","Nein","Ja","Hochheben","Danke","Bitte","Schuhe","Nase",
  "ab","Abend","aber","acht","Affe","alle","allein","als","also","alt","am","an","andere","anfangen","Angst","antworten","Apfel","Arbeit","arbeiten","Arzt","auch","auf","Auge","aus",
@@ -200,11 +174,12 @@ function gangelmann(){
   		break;
   	}
   }
-  if(ganador==mayusculas.length)
+  if(ganador==mayusculas.length){
   	alert("Gut gemacht.");
   $("#espaciojuegos").hide();
   $("#regreso").show();
-  });
+  }
+ });
 }
 
 function kindersudoku(){
@@ -394,4 +369,45 @@ if(document.getElementById("L").value=="Lplayer2" && document.getElementById("LL
 	$("#regreso").show(1000);
 	}
 }
+//faltaria
+function bibelquiz(){
+var count=0;
+var countanswer=0;
+var resultado="";
+var preguntas=["Wo?","Was?","Wie","Wann?","Wohin?","Woher?","Warum?","Um Wie viel Uhr?","Wer?","Mit Wem?"];
+var respuestas=["Bogotá","Medellin","Caracas","Apfel","Banane","Orange","Hart","Weich","Fest","Heute","Morgen","Gestern","Hause","Park","Bibliothek","Kolumbien","Spanien","Deutschland","Arbeit","Spaß","Familie","11:00","12:00","13:00","Ich","Du","Er","Papa","Mama","Bruder"];
+var richtig=[0,2,0,0,0,0,2,1,0,2];
+var countright=0;
+var countfail=0;
+$("#espaciojuegos").append("<div class='bibelfragen'><button id='enviorta'>Nächste Frage</button></div>");
+$(".bibelfragen").append("<div id='pregunta'>"+preguntas[count]+"</div><div id='respuesta'><button type='button' class='rtaquiz' id='firstanswer' value='0'>"+respuestas[countanswer]+"</button><button type='button' class='rtaquiz' id='secondanswer' value='1'>"+respuestas[countanswer+1]+"</button><button type='button' class='rtaquiz' id='thirdanswer' value='2'>"+respuestas[countanswer+2]+"</button></div>");
+	$(".rtaquiz").click(function(){	
+	resultado=document.getElementById(this.id).value;
+	if(resultado==richtig[count]){
+	$("#"+this.id).css("background-color","green");
+	countright=countright+1;
+	}else{
+    countfail=countfail+1;
+    $("#"+this.id).css("background-color","red");
+    }
+});
+$("#enviorta").click(function(){
+	if(count<preguntas.length-1){
+	$(".rtaquiz").css("background-color","transparent");
+	$("#pregunta").empty();
+	$("#respuesta").hide();
+	count=count+1;
+	$("#pregunta").append(preguntas[count]);
+	countanswer=countanswer+3;
+	$("#firstanswer").text(respuestas[countanswer]);
+	$("#secondanswer").text(respuestas[countanswer+1]);
+	$("#thirdanswer").text(respuestas[countanswer+2]);
+	$("#respuesta").show();
+	if((countanswer+2)==respuestas.length-1)
+	$("#enviorta").html("Ergebnisse Zeigen");
+}
+	else
+		$("#pregunta").append("<div id='ergebnisse'>Richtig:"+countright+" Falsch="+countfail+"</div>");
+	});	
+   }
 });
