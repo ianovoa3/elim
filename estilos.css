@@ -243,6 +243,79 @@ padding-left:30px;
 		margin-left: 30%;
 		height: 300px;
 	}
+	#Fondo{
+		position: absolute;
+		height:100%; 
+		width:100%;
+		background-color: #FF8840;
+
+	}
+	.kindergottesdienst{
+	border-radius: 30%;
+	width: 150px;
+	height: 150px;
+	margin-top: 10%;
+	position: absolute;
+	}
+	.kindergottesdienst:hover{
+	opacity: 0.8;
+  filter: alpha(opacity=50);
+}
+#schäfchen{
+	margin-left: 25%;
+}
+#Löwen{
+	margin-left: 40%;
+}
+#Königskinder{
+	margin-left: 55%;
+}
+.textokinder{
+	width:500px;
+	height: 500px;
+	position: absolute;
+	margin-left: 30%;
+	margin-top: 5%;
+	background-image: url("imagenes/bibliakinder.jpg");
+}
+#kindertext{
+	padding-left: 20px;
+	padding-top: 15px;
+	background-color: rgb(51, 102, 255);
+}
+.animacionpicture{
+	position: absolute;
+	margin-top: 20%;
+	margin-left: 20px;
+	-webkit-animation-name:animacion1;
+	-webkit-animation-duration:3s;
+	-webkit-animation-iteration-count: infinite;
+	-webkit-animation-direction:alternate;
+}
+#gif{
+	position: absolute;
+	margin-left: 75%;
+}
+#return{
+	position: absolute;
+	margin-left: 80%;
+	width:132px;
+	height: 132px;
+	margin-top: 25%;
+	background-image: url("imagenes/return.png");
+	border-radius: 15%;
+}
+@-webkit-keyframes animacion1{
+	from{
+		top:20%;
+		left:20px;
+	}
+	to{
+		top:-30%;
+		left:15%;
+	}
+}
+
 @media screen and (max-width: 1000px){
 	/*body{
 		background:#ff6000;

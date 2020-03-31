@@ -1,12 +1,37 @@
 $(document).ready(function (){
 	/* Cambio de numero de fotos cambia el if , contador en izquierda y value del boton*/
 $("#testimonios").hide();
+$(".textokinder").hide();
+$("#return").hide();
 $("#mas").click(function (){
 		$("#testimonios").show();
 });
 $("#menos").click(function (){
 		$("#testimonios").hide();
 });
+$(".kindergottesdienst").click(function(){
+//var valuekinder=document.getElementsByClassName("kindergottesdienst")[0].value;
+	$("#biblia").toggle(60);
+	$(".textokinder").show();
+});
+$("#schäfchen").click(function(){
+	$(".animacionpicture").attr("src","imagenes/sheep.png");
+	$("#return").show(60);
+});
+$("#Löwen").click(function(){
+	$(".animacionpicture").attr("src","imagenes/loewe.png");
+	$("#return").show(60);
+});
+$("#Königskinder").click(function(){
+	$(".animacionpicture").attr("src","imagenes/rey.png");
+	$("#return").show(60);
+});
+// $("#return").click(function{
+// 	$(".animacionpicture").attr("src","imagenes/jumping.png");
+// 	$(".textokinder").hide();
+// 	$("#biblia").show();
+// });
+
 var contador=0;
 var valor=document.getElementsByClassName("izquierda")[0].value;
 setInterval(cambiofotos,60000);
@@ -59,5 +84,5 @@ function descripcion(parametro){
 		$("#descripcion").append("<p id='ladescripcion'> Die schönste Straße Zittaus  </p>");
 		break;
 		}
-	}
+	}	
 });

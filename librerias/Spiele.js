@@ -277,7 +277,13 @@ function kindersudoku(){
 
 	 /*event trae info del droppable y el ui del que yo queria arrastrar */
 function elternsudoku(){
-	
+	for(var i=0;i<9;i++){
+		for(var j=0;j<9;j++){
+
+			$("#espaciojuegos").append("<div id='sudokugrande'><input type='number' class='casillasudoku'></div>");
+		}
+	}
+
 }
 
 
