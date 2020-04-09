@@ -17,7 +17,7 @@ position: relative;
 	margin-left: 20%;
 	margin-top: 50px;
 	border-radius: 15px;
-	background-image: url("imagenes/triqui.png");
+	background-image: url("../imagenes/triqui.png");
 }
 .botoneleccion:hover{
 	opacity: 0.8;
@@ -38,7 +38,7 @@ position: relative;
 	margin-left: 40%;
 	margin-top: 50px;
 	border-radius: 15px;
-	background-image: url("imagenes/memory.png");
+	background-image: url("../imagenes/memory.png");
 }
 #sudoku{
 	width:150px;
@@ -47,7 +47,7 @@ position: relative;
 	margin-left: 60%;
 	margin-top: 50px;
 	border-radius: 15px;
-	background-image: url("imagenes/sudoku.png");
+	background-image: url("../imagenes/sudoku.png");
 }
 #ahorcado{
 	width:150px;
@@ -56,7 +56,7 @@ position: relative;
 	margin-left: 30%;
 	margin-top: 250px;
 	border-radius: 15px;
-	background-image: url("imagenes/ahorcado.jpg");
+	background-image: url("../imagenes/ahorcado.jpg");
 }
 #bibelquiz{
 	width:150px;
@@ -65,7 +65,7 @@ position: relative;
 	margin-left: 30%;
 	margin-top: 250px;
 	border-radius: 15px;
-	background-image: url("imagenes/bibel.jpg");
+	background-image: url("../imagenes/bibel.jpg");
 }
 #bibelquiz{
 	width:150px;
@@ -200,31 +200,31 @@ position: relative;
 #cuadrado{
 	width:100px;
 	height: 100px;
-	background-image: url("imagenes/cuadrado.jpg");
+	background-image: url("../imagenes/cuadrado.jpg");
 	position: relative;
 }
 #pentagono{
 	width:100px;
 	height: 100px;
-	background-image: url("imagenes/pentagono.jpg");
+	background-image: url("../imagenes/pentagono.jpg");
 	position: relative;	
 }
 #estrella{
 	width:100px;
 	height: 100px;
-	background-image: url("imagenes/estrella.jpg");
+	background-image: url("../imagenes/estrella.jpg");
 	position: relative;	
 }
 #circuloimg{
 	width:100px;
 	height: 100px;
-	background-image: url("imagenes/circulo.jpg");
+	background-image: url("../imagenes/circulo.jpg");
 	position: relative;	
 }
 #triangulo{
 	width:100px;
 	height: 100px;
-	background-image: url("imagenes/triangulo.jpg");
+	background-image: url("../imagenes/triangulo.jpg");
 	position: relative;	
 }
 #verificarcampo{

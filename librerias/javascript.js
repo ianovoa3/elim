@@ -3,6 +3,8 @@ $(document).ready(function (){
 $("#testimonios").hide();
 $(".textokinder").hide();
 $("#return").hide();
+$("#Rangers").hide();
+$(".flyer").hide();
 $("#mas").click(function (){
 		$("#testimonios").show();
 });
@@ -26,12 +28,22 @@ $("#Königskinder").click(function(){
 	$(".animacionpicture").attr("src","imagenes/rey.png");
 	$("#return").show(60);
 });
-// $("#return").click(function{
-// 	$(".animacionpicture").attr("src","imagenes/jumping.png");
-// 	$(".textokinder").hide();
-// 	$("#biblia").show();
-// });
-
+ $("#return").click(function(){
+ 	$(".animacionpicture").attr("src","imagenes/jumping.png");
+ 	$(".textokinder").hide();
+ 	$("#biblia").show();
+ });
+ $(".tesoro").click(function(){
+$("#Rangers").show(1000);
+});
+$("#rangershome").click(function(){
+$("#rangersdescription").show();
+$("#rangersgruppende").hide();
+});
+$("#rangersgruppen").click(function(){
+$("#rangersgruppende").show();
+$("#rangersdescription").hide();
+});
 var contador=0;
 var valor=document.getElementsByClassName("izquierda")[0].value;
 setInterval(cambiofotos,60000);
@@ -84,5 +96,5 @@ function descripcion(parametro){
 		$("#descripcion").append("<p id='ladescripcion'> Die schönste Straße Zittaus  </p>");
 		break;
 		}
-	}	
+	}
 });
