@@ -5,6 +5,7 @@ $(".textokinder").hide();
 $("#return").hide();
 $("#Rangers").hide();
 $(".flyer").hide();
+$("#Essendata").hide();
 $("#mas").click(function (){
 		$("#testimonios").show();
 });
@@ -39,10 +40,27 @@ $("#Rangers").show(1000);
 $("#rangershome").click(function(){
 $("#rangersdescription").show();
 $("#rangersgruppende").hide();
+$("#locationranger").hide();
 });
 $("#rangersgruppen").click(function(){
 $("#rangersgruppende").show();
 $("#rangersdescription").hide();
+$("#locationranger").hide();
+});
+$("#location").click(function(){
+$("#rangersgruppende").hide();
+$("#rangersdescription").hide();
+$("#locationranger").show();
+});
+$(".close").click(function(){
+	$("#Essendata").hide(1000);
+});
+$("#cafe").click(function(){
+	$("#Essendata").show(1000);
+ 	if(document.getElementById(this.id).value=="Cafe"){
+ 		//aqui quede
+ 		$("#Essendata").append("<p>Beschreibung von Cafe</p>");
+ 	}
 });
 var contador=0;
 var valor=document.getElementsByClassName("izquierda")[0].value;

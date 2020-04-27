@@ -339,6 +339,32 @@ transform:scale(1.25);
 .flyer{
 	font-family: 'Special Elite', cursive;
 }
+#gottesdienstbild{
+	position: absolute;
+
+}
+#textodienst{
+	position: absolute;
+	margin-left: 50%;
+	width:49%;
+	height:65%;
+	background-color: violet;
+	top:42%;
+	font-family: "Goudy Bookletter 1911", sans-serif;
+	padding: 10px;
+}
+.cafe:hover{
+	opacity: 0.8;
+  filter: alpha(opacity=50);
+}
+#Essendata{
+	position: absolute;
+  	background-color: #D9B6FE;
+  	top: 40%;
+  	width: 100%;
+  	height:70%;
+  	opacity: 0.8;
+}
 @-webkit-keyframes animacion1{
 	from{
 		top:20%;
