@@ -1,15 +1,12 @@
 <html>
 <meta name="viewport" content="width=device-width, user-scalable=no,initial-scale=1.0,maximum-scale=1.0"> 
-<!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous"> -->
-<link href="https://fonts.googleapis.com/css?family=Titan+One&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Courgette&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Special+Elite&display=swap" rel="stylesheet">
 <meta charset="UTF-8" />
 <head>
 <link href="style/estilos.css" rel="stylesheet" type="text/css"/>
-<link href="style/juegos.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="librerias/jquery.js"></script>
-<script type="text/javascript" src="librerias/Spiele.js"></script>
-<script type="text/javascript" src="librerias/jquery-ui/jquery-ui.min.js"></script>
-<script type="text/javascript" src="librerias/jquery-ui/jquery-ui.js"></script>
+<script type="text/javascript" src="librerias/javascript.js"></script>
 </head>
 <body>
 <div id="firstpart">
@@ -53,28 +50,20 @@
 				<li><a href="">ES</a></li>
 			</ul>
 		</div>
-		<div id="cuadrodejuegos">
-			<h1 id="titel">Spiele für Alle!!!</h1>
-			<div id="juegos">
-			<button id="triqui" class="botoneleccion"></button>
-			<button id="memory" class="botoneleccion"></button>
-			<button id="sudoku" class="botoneleccion"></button>
-			<button id="ahorcado" class="botoneleccion"></button>
-			<button id="bibelquiz" class="botoneleccion"></button>	
-			</div>
-			<div id="espaciojuegos">
-			<div id="horca">
-			<canvas id="linea1" width='200' height='380'></canvas>
+		<p id="Erklärung"></p>
+		<div id="paintyouridea">
+			
 		</div>
+		<div id="choosecolor">
+			<h1>Wähle dein Color aus</h1>
+			<button class="colors" id="red" style="	background-color:red;position: relative;"></button>
+			<button class="colors" id="green" style="	background-color:green;position: relative;"></button>
+			<button class="colors" id="blue" style="	background-color:blue;position: relative;"></button>
+			<button class="colors" id="orange" style="	background-color:orange;position: relative;"></button>
+			<button class="colors" id="yellow" style="	background-color:yellow;position: relative;"></button>
 		</div>
-		<div id="regreso">
-			<button type="button" class="btn btn-danger" onclick="recarga()">Zum Menü</button>
-			</div>
+		<div id="Elim-Jugend">
+			
 		</div>
-		</body>
-		<script>
-function recarga(){
-location.reload(true);
-}
-		</script>
-	</html>
+	</body>
+</html>

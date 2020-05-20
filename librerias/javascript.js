@@ -1,5 +1,18 @@
 $(document).ready(function (){
 	/* Cambio de numero de fotos cambia el if , contador en izquierda y value del boton*/
+function description(option){
+	switch(option){
+		case "Cafe":
+		$("#Titel").append("Cafe");
+		break;
+		case "Mittagsessen":
+		$("#Titel").append("Mittagsessen");
+		break;
+		case "Galerie":
+		$("#Titel").append("Galerie");
+		break;
+	}
+}
 $("#testimonios").hide();
 $(".textokinder").hide();
 $("#return").hide();
@@ -54,15 +67,23 @@ $("#locationranger").show();
 });
 $(".close").click(function(){
 	$("#Essendata").hide(1000);
+	$("#Titel").empty();
 });
-$("#cafe").click(function(){
+$(".cafe").click(function(){
 	$("#Essendata").show(1000);
- 	if(document.getElementById(this.id).value=="Cafe"){
- 		//aqui quede
- 		$("#Essendata").append("<p>Beschreibung von Cafe</p>");
- 	}
+	description($("#"+this.id)[0].id);
+});
+$(".colors").click(function(){
+	color=this.id;
+});
+$( "#paintyouridea" ).mousemove(function ( event ) {
+	var paintfocus=document.querySelector("#paintyouridea");
+	//paint
+	event.pageX=color;
+	event.pageY=color;
 });
 var contador=0;
+var color;
 var valor=document.getElementsByClassName("izquierda")[0].value;
 setInterval(cambiofotos,60000);
 function cambiofotos(){
@@ -114,5 +135,5 @@ function descripcion(parametro){
 		$("#descripcion").append("<p id='ladescripcion'> Die schönste Straße Zittaus  </p>");
 		break;
 		}
-	}
+	}	
 });
