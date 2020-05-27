@@ -77,11 +77,16 @@ $(".colors").click(function(){
 	color=this.id;
 });
 $( "#paintyouridea" ).mousemove(function ( event ) {
-	var paintfocus=document.querySelector("#paintyouridea");
-	//paint
-	event.pageX=color;
-	event.pageY=color;
+	paint(event.pageX,event.pageY,color);
 });
+function paint(x,y,Farbe){
+var canvas = document.getElementById("graphic");
+var ctx = canvas.getContext("2d");
+ctx.fillStyle = ""+Farbe+"";
+ctx.beginPath();
+ctx.arc(500,30,1000,0,5*Math.PI);
+ctx.fill();		
+}
 var contador=0;
 var color;
 var valor=document.getElementsByClassName("izquierda")[0].value;
