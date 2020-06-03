@@ -2,6 +2,8 @@
 POSITION ABSOLUTE:uno le da los valores con respecto  a otro div que tenga la posicion relativa;
 POSITION RELATIVE:es la referencia y el otro div lo toma asi;
 */
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+@import url(https://fonts.googleapis.com/css?family=Bree+Serif);
 #todo{
 	background-image: url("../imagenes/Indoorspielplatz.jpg");
 	width:100%;
@@ -402,6 +404,68 @@ transform:scale(1.25);
 	width:99%;
 	height:81%;
 }
+#Elim-Jugend{
+	position: absolute;
+	margin-left: 75%;
+	margin-top: 20px;
+	width:20%;
+}
+i{
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 4px;
+    margin: -7px 0 0px 7px;
+    vertical-align: middle;
+}
+.navmenu{
+	margin: 30px auto;
+    background-color: #4fb7f9;
+  	box-shadow: 0px 3px 20px 3px #162433;
+}
+.navmenu ul ul{
+	display: none;
+    position: absolute;
+}
+.navmenu ul li:hover >ul{
+    display:inherit;
+}
+.navmenu a {
+    display:block;
+    padding:5px; 
+    color:#FFF;
+    font-size:16px;
+    line-height: 60px;
+    text-decoration:none;
+}
+.navmenu a:hover { 
+    background-color: #000000; 
+}
+.navmenu ul li ul p{
+	background-color: #4fb7f9; 
+	position: relative;
+}
+.beschreibungleitung{
+	position:absolute;
+	margin: 20px;
+	width:90%;
+	height: 80%;
+}
+.beschreibungbox{
+	position: relative;
+	margin: 20px;
+}
+#Pastor{
+	background-color:#BFD1B6;
+	width:90%;
+	height: 20%;
+}
+#Mentor{
+	background-color:#E9DA9D;
+	width:90%;
+	height: 20%;
+}
+
 @-webkit-keyframes animacion1{
 	from{
 		top:20%;
