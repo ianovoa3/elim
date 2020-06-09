@@ -111,13 +111,15 @@ padding-left:30px;
 	.izquierda{
 		margin-left: 15%;
 		width:60px;
-		background-color: green;
+		background-color: #C2531F;
+		border-radius: 15px;
 	}
 	.derecha{
 		margin-left: 40%;
 		width:60px;
 		margin-bottom: 90%;
-		background-color: yellow;
+		background-color: #03C21D;
+		border-radius: 15px;
 	}
 	#botones{
 		width:390px;
@@ -142,11 +144,32 @@ padding-left:30px;
 		position: absolute;
 	}
 	.footer{
-		background-color: black;
+		background-image: url("../imagenes/zittau.jpg");
 		height: 30%;
 		width: 100%;
 		position: absolute;
-		margin-top: 10%;
+		margin-top:100px;
+		background-repeat: no-repeat;
+	}
+	#footerdescription{
+		margin-left:850px;
+		color:#D6A00B;
+		position: absolute;
+		font-family: 'Roboto Mono', monospace;
+		font-size: 100%;
+		margin-top: 50px;
+		background-color: black;
+		border-radius: 15px;
+		padding: 10px;
+	}
+	#imagendescription{
+		border-radius: 15px;
+		position: absolute;
+		width:150px;
+		height:100px;
+		background-color: orange;
+		margin-left: 200px;
+		margin-top: 40px;
 	}
 @media screen and (max-width: 1320px){
 	#idiomas{
@@ -454,18 +477,24 @@ i{
 .beschreibungbox{
 	position: relative;
 	margin: 20px;
-}
-#Pastor{
-	background-color:#BFD1B6;
 	width:90%;
 	height: 20%;
 }
-#Mentor{
-	background-color:#E9DA9D;
-	width:90%;
-	height: 20%;
+#fotos{
+	position: absolute;
+	margin-top: 40px;
+	margin-left: 87%;
+	border:solid black;
+	width:10%;
+	height: 1055px;
 }
-
+#Vorstellung{
+	position: absolute;
+	margin: 50px;
+	width:75%;
+	height: 30%;
+	border:solid black;
+}
 @-webkit-keyframes animacion1{
 	from{
 		top:20%;
