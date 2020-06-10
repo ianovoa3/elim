@@ -47,14 +47,10 @@ $("#regreso").show(1000);
 });
 //sudoku
 $("#sudoku").click(function(){
-	$("#espaciojuegos").append("<div id='selectsudoku'><button type='button' class='btn btn-primary btn-lg btn-block' id='kindersudoku'>Kinder</button><button  type='button' class='btn btn-secondary btn-lg btn-block' id='elternsudoku'>Erwachsene</button></div>");
+	$("#espaciojuegos").append("<div id='selectsudoku'><button type='button' class='btn btn-primary btn-lg btn-block' id='kindersudoku'>Geht Los!</button></div>");
 	$("#kindersudoku").click(function (){
 		$("#selectsudoku").fadeOut();
 		kindersudoku();
-	});
-	$("#elternsudoku").click(function (){
-		$("#selectsudoku").fadeOut();
-		//elternsudoku();
 	});
 });
 //galgenmännchen
@@ -276,25 +272,15 @@ function kindersudoku(){
 }
 
 	 /*event trae info del droppable y el ui del que yo queria arrastrar */
-function elternsudoku(){
-	for(var i=0;i<9;i++){
-		for(var j=0;j<9;j++){
+// function elternsudoku(){
+// 	for(var i=0;i<9;i++){
+// 		for(var j=0;j<9;j++){
 
-			$("#espaciojuegos").append("<div id='sudokugrande'><input type='number' class='casillasudoku'></div>");
-		}
-	}
+// 			$("#espaciojuegos").append("<div id='sudokugrande'><input type='number' class='casillasudoku'></div>");
+// 		}
+// 	}
 
-}
-
-
-
-
-
-
-
-
-
-
+// }
 function triquifunction(parametroid){
 if(document.getElementById(parametroid).value==="neutral"){
 if(jugador){
@@ -380,8 +366,8 @@ function bibelquiz(){
 var count=0;
 var countanswer=0;
 var resultado="";
-var preguntas=["Wo?","Was?","Wie","Wann?","Wohin?","Woher?","Warum?","Um Wie viel Uhr?","Wer?","Mit Wem?"];
-var respuestas=["Bogotá","Medellin","Caracas","Apfel","Banane","Orange","Hart","Weich","Fest","Heute","Morgen","Gestern","Hause","Park","Bibliothek","Kolumbien","Spanien","Deutschland","Arbeit","Spaß","Familie","11:00","12:00","13:00","Ich","Du","Er","Papa","Mama","Bruder"];
+var preguntas=["Wer baute die Arche?","Wie hieß der Bruder Jakobs?","Wer hatte einen Mantel aus Kamelhaaren und aß Heuschrecken und wilden Honig?","Wie hieß der älteste Sohn Jakobs?","Welche Krankheit hatte Mephiboseth?","Welche Jünger Jesu fand im Mund eines Fisches ein Geldstück?","Wie hieß die Göttin, die in Ephesus am meisten verehrt wurde?","Wie alt wurde Hennoch?","Nach Verlauf von wie viel Jahren zog Paulus wieder nach Jerusalem?","Wie viel Wunder tut Gott?"];
+var respuestas=["Noah","Johannes","Mose","Abel","Isaac","Esau","Johannes der Täufer","Jakobus","Judas","Ruben","Benjamin","Ephraim","Er war lahm","Er war blind","Er war taub","Petrus","Johannes","Jakobus","Martha","Maria","Diana","340 Jahre","365 Jahre","120 Jahre","14 Jahre","25 Jahre","7 Jahre","198","34","Unzählige"];
 var richtig=[0,2,0,0,0,0,2,1,0,2];
 var countright=0;
 var countfail=0;
@@ -412,8 +398,11 @@ $("#enviorta").click(function(){
 	if((countanswer+2)==respuestas.length-1)
 	$("#enviorta").html("Ergebnisse Zeigen");
 }
-	else
+	else{
 		$("#pregunta").append("<div id='ergebnisse'>Richtig:"+countright+" Falsch="+countfail+"</div>");
+		$("#espaciojuegos").append("<button type='button' class='btn btn-danger'id='quizback' onclick='recarga()'>Zum Menü</button>");
+	}
+
 	});	
    }
 });

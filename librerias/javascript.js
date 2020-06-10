@@ -123,7 +123,7 @@ function descripcion(parametro){
 		break;
 		case 5:
 		$("#descripcion").empty();
-		$("#descripcion").append("<p id='ladescripcion'> Die schönste Straße Zittaus  </p>");
+		$("#descripcion").append("<p id='ladescripcion'>Das Zentrum Zittaus</p>");
 		break;
 		}
 	}	
