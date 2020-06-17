@@ -267,7 +267,7 @@ padding-left:30px;
 #bildspielplatz{
 	position: absolute;
 	margin-left: 50%;
-	margin-top: 20px;
+	margin-top: 90px;
 }
 	.nombres{
 		margin-left: 70%;
@@ -300,6 +300,10 @@ padding-left:30px;
 #Königskinder{
 	margin-left: 55%;
 }
+.titlekinder{
+	position: absolute;
+	margin-top: 23%;
+}
 .textokinder{
 	width:500px;
 	height: 500px;
@@ -307,10 +311,11 @@ padding-left:30px;
 	margin-left: 30%;
 	margin-top: 5%;
 	background-image: url("../imagenes/bibliakinder.jpg");
+	border-radius:700px;
 }
 #kindertext{
 	padding-left: 20px;
-	padding-top: 15px;
+	padding:5px;
 	background-color: rgb(51, 102, 255);
 }
 .animacionpicture{
@@ -331,7 +336,7 @@ padding-left:30px;
 	margin-left: 80%;
 	width:132px;
 	height: 132px;
-	margin-top: 25%;
+	margin-top: 28%;
 	background-image: url("../imagenes/return.png");
 	border-radius: 15%;
 }
@@ -472,6 +477,11 @@ i{
 .navmenu ul li ul p{
 	background-color: #4fb7f9; 
 	position: relative;
+}
+.Gemeindeleitungtitel{
+	position: relative;
+	padding: 5px;
+	font-family: "Apple Chancery", cursive;
 }
 .beschreibungleitung{
 	position:absolute;
