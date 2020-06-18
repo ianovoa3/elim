@@ -503,12 +503,47 @@ i{
 	width:10%;
 	height: 1055px;
 }
-#Vorstellung{
+.Erfahrung_box{
+	position: relative;
+	width: 75%;
+	height:20%;
+	border:dashed #57C207;
+	border-radius: 60px;	
+}
+#boxlinks{
+	margin: 20px;
+}
+#boxrechts{
+	margin-left: 300px;
+	margin-top: 20px;
+}
+.Text_Bericht{
+	padding: 20px 30px 20px 30px;
+}
+.rechtsfoto{
 	position: absolute;
-	margin: 50px;
-	width:75%;
-	height: 30%;
+	width:200px;
+	height: 120px;
+	margin-left: 105%;
+}
+.linksfoto{
+	position: absolute;
+	width:200px;
+	height: 120px;
+	margin-left: -25%;
+}
+#my_projekt{
+	position: absolute;
+	width: 90%;
+	height:30%;
+	margin: 20px;
 	border:solid black;
+	border-radius: 50px;
+}
+.projects{
+	position: relative;
+	padding-left: 40%;
+	padding-top: 10px;
 }
 @-webkit-keyframes animacion1{
 	from{
