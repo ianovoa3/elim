@@ -4,13 +4,30 @@ $(document).ready(function (){
 function description(option){
 	switch(option){
 		case "Cafe":
-		$("#Titel").append("Cafe");
+		$("#Titel").append("Begegnungscafe");
+		$("#Inhalt").append("-	Dienstzeit: Mittwoch und Freitag 14:30 Uhr – 17:30 Uhr"+"<br>"+
+	"-	Menschen zu dienen"+"<br>"+
+	"-	mit Menschen ins Gespräch kommen (jeder ist willkommen)"+"<br>"+
+	"-	gute Gemeinschaft stiften und erleben"+"<br>"+
+	"Reguläre Zeiten Begegnungscafe: Mittwoch und Freitag 14:30 Uhr – 17:30 Uhr"+"<br>"+
+	"Ansprechpartner: Andrea Kalies / Johannes Weiß"
+	);
 		break;
 		case "Mittagsessen":
-		$("#Titel").append("Mittagsessen");
+		$("#Titel").append("Mittagstisch");
+		$("#Inhalt").append("Mittagstisch"+"<br>"+
+"-	Dienstzeit: Dienstag bis Freitag 10:00 – 14:00 Uhr"+"<br>"+
+"-	Planung und Einkauf für Kochen 4 Tage (Dienstag – Freitag)"+"<br>"+
+"-	Menschen zu dienen"+"<br>"+
+"-	mit Menschen ins Gespräch kommen (jeder ist willkommen)"+"<br>"+
+"-	gute Gemeinschaft stiften und erleben"+"<br>"+
+"-	Hobbyköche, die sich zutrauen, für 10-15 Personen zu kochen, können sich ausprobieren"+"<br>"+
+"Reguläre Mittagstischzeiten: Dienstag bis Donnerstag 12:15 Uhr / Freitag 12:00");
 		break;
 		case "Galerie":
-		$("#Titel").append("Galerie");
+		$("#Titel").append("Wichtige Informationen");
+		$("#Inhalt").append("Seit der Corona-Pandemie Begegnung eingeschränkt"+"<br>"+"und innerhalb der vorgegebenen Sicherheitsvorschriften."+"<br>"+
+		"Im Moment werden die Maßnahmen Mittagstisch und Begegnungscafe"+"<br>"+"durch den Landkreis Görlitz mit einer finanziellen Förderung und einer Arbeitsgelegenheit"+"<br>"+"mit Aufwandsentschädigung unterstützt.");
 		break;
 	}
 }
@@ -69,6 +86,7 @@ $("#locationranger").show();
 $(".close").click(function(){
 	$("#Essendata").hide(1000);
 	$("#Titel").empty();
+	$("#Inhalt").empty();
 });
 $(".cafe").click(function(){
 	$("#Essendata").show(1000);
