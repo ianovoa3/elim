@@ -503,14 +503,6 @@ i{
 	width:90%;
 	height: 20%;
 }
-#fotos{
-	position: absolute;
-	margin-top: 40px;
-	margin-left: 87%;
-	border:solid black;
-	width:10%;
-	height: 1055px;
-}
 .Erfahrung_box{
 	position: relative;
 	width: 75%;
@@ -543,14 +535,14 @@ i{
 #my_projekt{
 	position: absolute;
 	width: 90%;
-	height:30%;
+	height:50%;
 	margin: 20px;
 	border:solid black;
 	border-radius: 50px;
 }
 .projects{
 	padding-left: 40%;
-	padding-top: 10px;
+	padding-top: 30px;
 }
 @-webkit-keyframes animacion1{
 	from{

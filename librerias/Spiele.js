@@ -171,7 +171,7 @@ function gangelmann(){
   	}
   }
   if(ganador==mayusculas.length){
-  	alert("Gut gemacht.");
+  	alert("Gut gemacht.Das Wort war:"+palabras[random]);
   $("#espaciojuegos").hide();
   $("#regreso").show();
   }
